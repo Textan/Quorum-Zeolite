@@ -28,26 +28,27 @@ Quorum-Zeolite is a multiscale physics screening engine designed to evaluate cry
 
 ---
 
-## Running the Application
+## Quick Start (Run Locally)
 
-### 1. Verify Environment
-```bash
-bash scripts/verify_env.sh
-```
+### 1. One-Click Launch
+- **Windows**: Double-click `run.bat` (or run `.\run.bat` in terminal)
+- **Linux / macOS**: Run `./run.sh`
 
-### 2. Start Backend & Built-In Web Interface
+### 2. Manual Command Line
 ```bash
-# Start FastAPI backend server with rich interactive UI
 python -m uvicorn backend.api:app --host 127.0.0.1 --port 8000 --reload
 ```
 Open your browser to:
-- **Batch Submission**: [http://localhost:8000/submit](http://localhost:8000/submit)
 - **Interactive UI**: [http://localhost:8000](http://localhost:8000)
+- **Batch Submission**: [http://localhost:8000/submit](http://localhost:8000/submit)
 
-### 3. Optional Next.js App Router Frontend
+*(The built-in web UI runs directly from FastAPI with complete Notion styling — no Node.js or npm setup needed.)*
+
+### 3. Optional Next.js Frontend
 ```bash
 cd frontend
-npm run build && npm start
+npm install
+npm run dev
 ```
 
 ---
